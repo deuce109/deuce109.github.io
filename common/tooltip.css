@@ -1,11 +1,12 @@
 [tooltip] {
   display: inline-block;
   position: relative;
-  text-decoration: underline;
+  text-decoration: underline var(--primary) dashed 2px;
 }
 [tooltip]:hover:after {
-  background: rgba(255,255,255,0.9);
-  border: 1px solid #404040;
+  background: var(--primary90);
+  border: 1px solid var(--text);
+  color: var(--text);
   border-radius: 5px;
   position: absolute;
   bottom: 100%;
@@ -15,8 +16,6 @@
   font-size: 0.75rem;
   padding: 5px 10px;
   z-index: 98;
-/*   width: 250px; */
-  /* max-width: 400px; */
   overflow: auto;
   font-style: normal;
   margin-left: -50%;

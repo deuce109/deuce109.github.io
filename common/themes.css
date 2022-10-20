@@ -1,0 +1,52 @@
+html[theme="light"] {
+  --background: #F8DEB8;
+  --text: #1F1F1F;
+  --primary:  #64A4D5;
+  --primary90: #F8DEB890;
+}
+
+a, a:hover, a:visited, a:active {
+  color: var(--text);
+}
+
+html[theme="dark"] {
+  --background: #303030;
+  --text: #C2BAAE;
+  --primary:  #768FA7;
+  --background90: #30303090;
+ 
+}
+
+html {
+  color: var(--text);
+  background-color: var(--background);
+}
+
+
+#themeSvg {
+  height: 2rem;
+  width: 2rem;
+  top: 30px;
+  right: 30px;
+  position: fixed;
+  border: 2px solid var(--text);
+  border-radius: 5px;
+  padding: 5px
+}
+
+html[theme="light"] #themeSvg {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(0%) hue-rotate(151deg) brightness(104%) contrast(116%);
+  content: url(../common/sun.svg)
+}
+
+html[theme="dark"] #themeSvg {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(11%) saturate(265%) hue-rotate(357deg) brightness(89%) contrast(89%);
+  content: url(../common/moon.svg)
+}
+
+@media only screen and (max-width: 600px) {
+  #themeSvg {
+    height: 1rem;
+    width: 2rem;
+  }
+}
