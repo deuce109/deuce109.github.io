@@ -4,13 +4,13 @@
   text-decoration: underline var(--primary) dashed 2px;
 }
 [tooltip]:hover:after {
-  background: var(--primary90);
+  background: var(--background);
   border: 1px solid var(--text);
   color: var(--text);
   border-radius: 5px;
   position: absolute;
-  bottom: 100%;
-  left: 0;
+  bottom: -10%;
+  left: 175%;
   content: attr(tooltip);
   font-family: inherit;
   font-size: 0.75rem;

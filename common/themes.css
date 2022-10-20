@@ -6,7 +6,7 @@ html[theme="light"] {
 }
 
 a, a:hover, a:visited, a:active {
-  color: var(--text);
+  color: var(--text) !important;
 }
 
 html[theme="dark"] {
@@ -14,7 +14,6 @@ html[theme="dark"] {
   --text: #C2BAAE;
   --primary:  #768FA7;
   --background90: #30303090;
- 
 }
 
 html {
