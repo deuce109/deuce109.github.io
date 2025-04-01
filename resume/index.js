@@ -1,17 +1,31 @@
-function bodyLoad() {
-  updateCookies()
-  document.getElementsByTagName('html')[0].setAttribute('theme', cookies['theme'] || 'light')
-}
 
-function updateCookies() {
-  cookies = document.cookie?.split(';').map(cookie => cookie.split('=')).reduce((obj, pair) => {obj[pair[0]] = pair[1]; return obj;}, {}) || {}
-}
+function print() {
+    const content = document.getElementById("content");
+    const printWindow = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
 
-let cookies = {};
+    const head = printWindow.document.getElementsByTagName('head')[0]
+    const resumeStyle = document.createElement('link');
+    resumeStyle.rel = 'stylesheet';
+    resumeStyle.type = 'text/css';
+    resumeStyle.href = "resume.css"
 
-function buttonClick(event) {
-  document.cookie = `theme=${cookies['theme'] === 'light' ? 'dark' : 'light'}`
-  updateCookies()
-  document.getElementsByTagName('html')[0].setAttribute('theme', cookies['theme'])
+    const globalStyle = document.createElement('link');
+    globalStyle.rel = 'stylesheet';
+    globalStyle.type = 'text/css';
+    globalStyle.href = "../common/global.css"
+
+    const printStyle = document.createElement('link');
+    printStyle.rel = 'stylesheet';
+    printStyle.type = 'text/css';
+    printStyle.href = "print.css";
+
+    head.appendChild(printStyle);
+
+    head.appendChild(resumeStyle)
+    head.appendChild(globalStyle)
+
+    printWindow.document.getElementsByTagName('body')[0].appendChild(content.cloneNode(true))
+    
+    printWindow.document.close();
+    printWindow.focus();
 }
-bodyLoad()
