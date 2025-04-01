@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dalton Edmisten Resume</title>
   <link href="../common/global.css" rel="stylesheet" />
-  <link href="../common/themes.css" rel="stylesheet"/>
   <link href='../common/tooltip.css' rel="stylesheet" />
   <link href='resume.css' rel="stylesheet" />
   <script src="index.js"></script>
@@ -21,50 +20,56 @@
   </div>
   <div id="content">
     <h3 name="name" id="name">Dalton Edmisten</h3>
-    <p id="work-title"><em>Software Developer / Project Manager, <span tooltip="United States Air Force">USAF</span></em></p>
+    <p id="work-title"><em>Software Engineer, TEKSystems</em></p>
     <div id="contact">
-      <p class="contact-item">Cell Phone #: <a href="tel:+1-712-230-7424">+1-712-230-7424</a></p>
-      <p class="contact-item">Email: <a href="mailto:daltonedmisten@gmail.com">daltonedmisten@gmail.com</a></p>
-      <p class="contact-item">
-        LinkedIn: <a target="_blank" referrerpolicy="no-referrer"
-          href="https://www.linkedin.com/in/daltonedmisten">https://www.linkedin.com/in/daltonedmisten</a>
-      </p>
-      <p class="contact-item">
-        GitHub: <a target="_blank" referrerpolicy="no-referrer" href="https://github.com/deuce109">https://github.com/deuce109</a>
-      </p>
+
+      <span class="contact-item">Cell Phone</span>
+      <a href="tel:+1-712-230-7424">+1-712-230-7424</a>
+
+      <span class="contact-item">Email</span>
+      <a href="mailto:daltonedmisten@gmail.com">daltonedmisten@gmail.com</a>
+
+      <span class="contact-item">LinkedIn</span>
+      <a target="_blank" referrerpolicy="no-referrer" href="https://www.linkedin.com/in/daltonedmisten">https://www.linkedin.com/in/daltonedmisten</a>
+
+      <span class="contact-item">GitHub</span>
+      <a target="_blank" referrerpolicy="no-referrer" href="https://github.com/deuce109">https://github.com/deuce109</a>
     </div>
   
     <h3 name="skills" id="skills-title">Technical Skills</h3>
     <div id="skills">
-        <span class='table-title'>Languages:</span>
+        <span class='skill-title'>Languages:</span>
         <span>Java, .Net Core, Python 3, Go(lang), VBA, JavaScript/TypeScript, HTML, CSS, SQL</span>
 
-        <span class='table-title'>Frameworks:</span>
+        <span class='skill-title'>Frameworks:</span>
         <span>Spring, React.JS, Express.JS, SocketIO, SASS, ArcGIS, Android SDK, WPF, Material UI</span>
 
-        <span class='table-title'>Web Services:</span>
+        <span class='skill-title'>Web Services:</span>
         <span>SOAP, Restful, Micro Service Architecture</span>
 
-        <span class='table-title'>Databases:</span>
-        <span>Redis, MongoDB, MySQL, Microsoft Acces, SQLite</span>
+        <span class='skill-title'>Databases:</span>
+        <span>Redis, MongoDB, MySQL, Microsoft Access, SQLite</span>
 
-        <span class='table-title'>Web Hosting:</span>
+        <span class='skill-title'>Web Hosting:</span>
         <span>NGINX, Pivotal Cloud Foundary, AWS, Traefik</span>
 
-        <span class='table-title'>Build / <span tooltip="Continuous Integration / Continuous Development">CI-CD:</span></span>
+        <span class='skill-title'>Build / <span tooltip="Continuous Integration / Continuous Development">CI-CD:</span></span>
         <span>Concourse, Jenkins, Gradle, CSProj, Webpack, Fortifiy, Sonarqube</span>
 
-        <span class='table-title'>Project Management:</span>
+        <span class='skill-title'>Project Management:</span>
         <span>Jira, Trello, Pivotal Tracker</span>
 
-        <span class='table-title'>Version Control:</span>
+        <span class='skill-title'>Version Control:</span>
         <span>Git, Gitlab, GitHub</span>
 
-        <span class='table-title'>Operating Systems:</span>
+        <span class='skill-title'>Operating Systems:</span>
         <span>Windows, Ubuntu, Red Hat 8, Android</span>
 
-        <span class='table-title'>Serialization:</span>
+        <span class='skill-title'>Serialization:</span>
         <span>JSON, CSV, Binary, XML</span>
+
+        <span class='skill-title'>Authentication:</span>
+        <span>Oracle LDAP, Keycloak OAuth</span>
 
     </div>
   
@@ -72,9 +77,26 @@
     <h4 name="professional" id="professional">Professional</h4>
     <div>
       <div class="job">
-        <p class="work-location"><span tooltip="United States Air Force">USAF</span></p>
-        <p>November 2016 - Present</p>
+        <span class="work-location">TEKSystems</span>
+        <span class="job-timeframe">November 2022 - Present</span>
       </div>
+      <em>DevSecOps Engieer & Software Engineer</em>
+      <ul>
+        <li>Support for the TADS contract for the 557th Weather Wing</li>
+        <li>Support for legacy enterprise systems to handle satellite data and process it into weather products for intelligence
+          operations <strong>Java 8</strong></li>
+        <li>Redesign and redevelop legacy systems and software to follow modern development and engineering standards <strong>Java
+          8</strong>, including containerization with <strong>Docker and Kubernetes</strong> and migration from <strong>Oracle LDAP</strong>
+          to <strong>Keycloak OAuth</strong></li>
+        <li> Engineer and develop a replacement <span tooltop="Content Management System">CMS</span> for Confluence-based web pages to be viewed by
+          foreign nationals using <strong>React.JS, Express.JS, and MongoDB</strong>. Designed for large-scale use and built on top of
+          <strong>Docker and Kubernetes</strong></li>
+      </ul>
+      <div class="job">
+        <span class="work-location" tooltip="United States Air Force">USAF</span>
+        <span class="job-timeframe">November 2016 - November 2022</span>
+      </div>
+      <em>Software Development Operations (3D0X4/1D7X1Z)</em>
     </div>
     <ul>
       <li>
@@ -125,7 +147,7 @@
         Develop website to display information for an artist and to allow personal requests using a <strong>Go</strong> server with a <strong>MongoDB</strong> database and <strong>Typescript React.JS</strong> frontend.
       </li>
       <li>
-        Develop a OS agnostic application to create .ISO images from an inserted disk using <strong>.Net Core</strong> and <a class="skill-link" target="_blank" href="https://avaloniaui.net/">Avalonia UI</a>
+        Develop a OS agnostic application to create .ISO images from an inserted disk using <strong>.Net Core</strong> and <a class="external-link" target="_blank" href="https://avaloniaui.net/">Avalonia UI</a>
       </li>
     </ul>
     </div>
