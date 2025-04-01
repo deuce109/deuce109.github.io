@@ -6,133 +6,126 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dalton Edmisten Resume</title>
+  <link href="../common/global.css" rel="stylesheet" />
   <link href="../common/themes.css" rel="stylesheet"/>
   <link href='../common/tooltip.css' rel="stylesheet" />
   <link href='resume.css' rel="stylesheet" />
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
+  <script defer src="../common/theme.js"></script>
 </head>
 
 <body>
-  <img id="themeSvg" onclick='buttonClick(this)'/>
+  <div id="control-buttons">
+    <theme-toggle></theme-toggle>
+    <button title="Printer friendly version" id="print-button" onclick="print()"><img alt="" src ="../common/print.svg"/></button>
+  </div>
   <div id="content">
-    <h2 name="resume" id="resume">Resume</h2>
     <h3 name="name" id="name">Dalton Edmisten</h3>
-    <p id="workTitle"><i>Software Developer / Project Manager, <span tooltip="United States Air Force">USAF</span></i></p>
+    <p id="work-title"><em>Software Developer / Project Manager, <span tooltip="United States Air Force">USAF</span></em></p>
     <div id="contact">
-      <p class="contactItem">Cell Phone #: <a href="tel:+1-712-230-7424">+1-712-230-7424</a></p>
-      <p class="contactItem">Work Phone #: <a href="tel:+1-402-294-2594">+1-402-294-2594</a></p>
-      <p class="contactItem">Email: <a href="mailto:daltonedmisten@gmail.com">daltonedmisten@gmail.com</a></p>
-      <p class="contactItem">
-        LinkedIn: <a target="_blank"
+      <p class="contact-item">Cell Phone #: <a href="tel:+1-712-230-7424">+1-712-230-7424</a></p>
+      <p class="contact-item">Email: <a href="mailto:daltonedmisten@gmail.com">daltonedmisten@gmail.com</a></p>
+      <p class="contact-item">
+        LinkedIn: <a target="_blank" referrerpolicy="no-referrer"
           href="https://www.linkedin.com/in/daltonedmisten">https://www.linkedin.com/in/daltonedmisten</a>
       </p>
-      <p class="contactItem">
-        GitHub: <a target="_blank" href="https://github.com/deuce109">https://github.com/deuce109</a>
+      <p class="contact-item">
+        GitHub: <a target="_blank" referrerpolicy="no-referrer" href="https://github.com/deuce109">https://github.com/deuce109</a>
       </p>
     </div>
   
-    <h3 name="skills" id="skills">Technical Skills</h3>
-    <table id="skills-table">
-      <tr>
-        <td class='tableTitle'>Languages:</td>
-        <td>Java, .Net Core, Python 3, Go(lang), VBA, JavaScript/TypeScript, HTML, CSS, SQL</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Frameworks:</td>
-        <td>Spring, React.JS, Express.JS, SocketIO, SASS, ArcGIS, Android SDK, WPF, Material UI</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Web Services:</td>
-        <td>SOAP, Restful, Micro Service Architecture</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Databases:</td>
-        <td>Redis, MongoDB, MySQL, Microsoft Acces, SQLite</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Web Hosting:</td>
-        <td>NGINX, Pivotal Cloud Foundary, AWS, Traefik</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Build / <span tooltip="Continuous Integration / Continuous Development">CI-CD:</span></td>
-        <td>Concourse, Jenkins, Gradle, CSProj, Webpack, Fortifiy, Sonarqube</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Project Management:</td>
-        <td>Jira, Trello, Pivotal Tracker</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Version Control:</td>
-        <td>Git, Gitlab, GitHub</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Operating Systems:</td>
-        <td>Windows, Ubuntu, Red Hat 8, Android</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Serialization:</td>
-        <td>JSON, CSV, Binary, XML</td>
-      </tr>
-    </table>
+    <h3 name="skills" id="skills-title">Technical Skills</h3>
+    <div id="skills">
+        <span class='table-title'>Languages:</span>
+        <span>Java, .Net Core, Python 3, Go(lang), VBA, JavaScript/TypeScript, HTML, CSS, SQL</span>
+
+        <span class='table-title'>Frameworks:</span>
+        <span>Spring, React.JS, Express.JS, SocketIO, SASS, ArcGIS, Android SDK, WPF, Material UI</span>
+
+        <span class='table-title'>Web Services:</span>
+        <span>SOAP, Restful, Micro Service Architecture</span>
+
+        <span class='table-title'>Databases:</span>
+        <span>Redis, MongoDB, MySQL, Microsoft Acces, SQLite</span>
+
+        <span class='table-title'>Web Hosting:</span>
+        <span>NGINX, Pivotal Cloud Foundary, AWS, Traefik</span>
+
+        <span class='table-title'>Build / <span tooltip="Continuous Integration / Continuous Development">CI-CD:</span></span>
+        <span>Concourse, Jenkins, Gradle, CSProj, Webpack, Fortifiy, Sonarqube</span>
+
+        <span class='table-title'>Project Management:</span>
+        <span>Jira, Trello, Pivotal Tracker</span>
+
+        <span class='table-title'>Version Control:</span>
+        <span>Git, Gitlab, GitHub</span>
+
+        <span class='table-title'>Operating Systems:</span>
+        <span>Windows, Ubuntu, Red Hat 8, Android</span>
+
+        <span class='table-title'>Serialization:</span>
+        <span>JSON, CSV, Binary, XML</span>
+
+    </div>
   
     <h3 name="experience" id="experience">Experience</h3>
     <h4 name="professional" id="professional">Professional</h4>
     <div>
       <div class="job">
-        <p><span tooltip="United States Air Force">USAF</span></p>
+        <p class="work-location"><span tooltip="United States Air Force">USAF</span></p>
         <p>November 2016 - Present</p>
       </div>
     </div>
     <ul>
       <li>
-        Develop and deploy Java / Spring applications on a <b
-          tooltip="Continuous Integration / Continuous Development">CI / CD</b> pipeline consisting of <b>Pivotal
-          Tracker, GitLab, Concourse, SonarQube, Fortify, and Pivotal Cloud Foundry</b>.
+        Develop and deploy Java / Spring applications on a <strong
+          tooltip="Continuous Integration / Continuous Development">CI / CD</strong> pipeline consisting of <strong>Pivotal
+          Tracker, GitLab, Concourse, SonarQube, Fortify, and Pivotal Cloud Foundry</strong>.
       </li>
       <li>
-        Develop <b>.Net Core</b> application for <b>Windows</b> based <span
+        Develop <strong>.Net Core</strong> application for <strong>Windows</strong> based <span
           tooltip="Nuclear Command, Control, and Communications">NC3</span> equipment.
       </li>
       <li>
-        Track software projects using <b>Trello Kanban boards</b> and <b>Jira dashboards</b> dependent on project for a
+        Track software projects using <strong>Trello Kanban boards</strong> and <strong>Jira dashboards</strong> dependent on project for a
         team of 7 members.
       </li>
       <li>
-        Develop applications using <b>Python 3</b> to collect, manipulate, normalize, and visualize <span
-          tooltip="Intelligence, Surveillance, and Reconnaissance"> ISR</span> data based off <b>SOAP API</b> calls.
+        Develop applications using <strong>Python 3</strong> to collect, manipulate, normalize, and visualize <span
+          tooltip="Intelligence, Surveillance, and Reconnaissance"> ISR</span> data based off <strong>SOAP API</strong> calls.
       </li>
       <li>
-        Develop web-based application using <b>.Net Core</b> and <b>Typescript React.JS</b> to manage certifications and
-        qualifications for classified programs with a <b>MySQL</b> database.
+        Develop web-based application using <strong>.Net Core</strong> and <strong>Typescript React.JS</strong> to manage certifications and
+        qualifications for classified programs with a <strong>MySQL</strong> database.
       </li>
       <li>
-        Develop and deploy web-based application using <b>Java/Spring</b> with a <b>MySQL</b> database and <b>Typescript
-          React.JS</b> <b>with ArcGIS</b> to normalize and visualize geospatial data from a satellite downlink.
+        Develop and deploy web-based application using <strong>Java/Spring</strong> with a <strong>MySQL</strong> database and <strong>Typescript
+          React.JS</strong> <strong>with ArcGIS</strong> to normalize and visualize geospatial data from a satellite downlink.
       </li>
       <li>
-        Develop and deploy <b>Microsoft Access</b> application using <b>VBA</b> and <b>SQL</b> for talent management of an
+        Develop and deploy <strong>Microsoft Access</strong> application using <strong>VBA</strong> and <strong>SQL</strong> for talent management of an
         organization of 200+ members.
       </li>
       <li>
-        Develop Android app using <b>Android SDK</b> to push notifications and data to 100K + attendees and admin app for <b>Android</b> and <b>iOS</b> using <b>.Net/Xamarin</b>
+        Develop Android app using <strong>Android SDK</strong> to push notifications and data to 100K + attendees and admin app for <strong>Android</strong> and <strong>iOS</strong> using <strong>.Net/Xamarin</strong>
       </li>
       <li>
-        Conversion of <b>Go</b> microservice to <b>Java / Spring</b> to include custom <b>CSV</b> parsing and telemetry data analysis.
+        Conversion of <strong>Go</strong> microservice to <strong>Java / Spring</strong> to include custom <strong>CSV</strong> parsing and telemetry data analysis.
       </li>
       <li>
-        Creation of a qualification and certification tool using <b>ASP.Net MVC</b> and <b>React.JS</b> with a <b>Redis</b> database
+        Creation of a qualification and certification tool using <strong>ASP.Net MVC</strong> and <strong>React.JS</strong> with a <strong>Redis</strong> database
       </li>
     </ul>
   <h4 name="personal" id="personal">Personal</h4>
     <ul>
       <li>
-        Develop data agnostic server using <b>TypeScript Express.JS</b> and <b>SQLite</b>.
+        Develop data agnostic server using <strong>TypeScript Express.JS</strong> and <strong>SQLite</strong>.
       </li>
       <li>
-        Develop website to display information for an artist and to allow personal requests using a <b>Go</b> server with a <b>MongoDB</b> database and <b>Typescript React.JS</b> frontend.
+        Develop website to display information for an artist and to allow personal requests using a <strong>Go</strong> server with a <strong>MongoDB</strong> database and <strong>Typescript React.JS</strong> frontend.
       </li>
       <li>
-        Develop a OS agnostic application to create .ISO images from an inserted disk using <b>.Net Core</b> and <a target="_blank" href="https://avaloniaui.net/">Avalonia UI</a>
+        Develop a OS agnostic application to create .ISO images from an inserted disk using <strong>.Net Core</strong> and <a class="skill-link" target="_blank" href="https://avaloniaui.net/">Avalonia UI</a>
       </li>
     </ul>
     </div>
