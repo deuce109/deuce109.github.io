@@ -1,6 +1,11 @@
 #contact {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: max-content min-content;
+}
+
+.contact-item {
+  font-weight: 600; 
+  margin-right: 10px;
 }
 
 button {
@@ -29,12 +34,6 @@ button {
   font-weight: 600;
 }
 
-.contact-item {
-  flex: 1;
-  margin-top: 7px;
-  margin-bottom: 0px;
-}
-
 .job {
   display: flex;
   flex-direction: row;
@@ -44,14 +43,6 @@ button {
   margin: 0 16.5vw;
   overflow: auto;
 }
-
-/* div.job > p {
-  flex: 1;
-  flex-basis: content;
-  padding: 0;
-  margin: 0;
-  margin-top: 8px;
-} */
 
 ul {
   list-style-type: disc;
@@ -108,5 +99,5 @@ html[theme='dark'] #print-button {
 
 #skills {
   display: grid;
-  grid-template-columns: 20% 75%;
+  grid-template-columns: max-content max-content;
 }
