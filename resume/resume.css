@@ -15,33 +15,21 @@ button {
   text-underline-offset: 3px;
 }
 
-#workTitle {
+#work-title {
   margin-top: 5px;
   padding: 0px;
-}
-
-#themeButton {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  height: 60px;
-  width: 60px;
-  border: solid 1px var(--primary);
-  border-radius: 5px;
-  background: var(--background);
-  color: var(--text);
 }
 
 .skill-link {
   font-weight: bold;
 }
 
-.tableTitle {
+.table-title {
   padding-right: 10px;
   font-weight: 600;
 }
 
-.contactItem {
+.contact-item {
   flex: 1;
   margin-top: 7px;
   margin-bottom: 0px;
@@ -49,20 +37,21 @@ button {
 
 .job {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #content {
   margin: 0 16.5vw;
   overflow: auto;
 }
 
-div.job > p {
+/* div.job > p {
   flex: 1;
   flex-basis: content;
   padding: 0;
   margin: 0;
   margin-top: 8px;
-}
+} */
 
 ul {
   list-style-type: disc;
@@ -75,7 +64,20 @@ ul {
 }
 
 h3 {
-  padding-bottom: 0.25rem
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.375rem
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+
+}
+
+.work-location {
+  font-weight: 600;
 }
 
 #control-buttons {
@@ -102,4 +104,9 @@ h3 {
 
 html[theme='dark'] #print-button {
   filter: invert(82%) sepia(5%) saturate(508%) hue-rotate(357deg) brightness(91%) contrast(93%);
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 20% 75%;
 }
