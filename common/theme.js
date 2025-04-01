@@ -19,6 +19,11 @@ function updateDocumentTheme(theme) {
 class ThemeToggleButton extends HTMLElement {
     constructor() {
         super();
+        const link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('href', '../common/theme.css');
+        document.head.appendChild(link);
+        
         this.attachShadow({ mode: 'open' });
 
         const theme = getTheme()

@@ -1,1 +1,1 @@
-// window.location.href = "/resume"
+window.location.href = "/home"

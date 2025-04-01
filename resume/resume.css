@@ -1,44 +1,3 @@
-#contact {
-  display: grid;
-  grid-template-columns: max-content min-content;
-}
-
-.contact-item {
-  font-weight: 600; 
-  margin-right: 10px;
-}
-
-button {
-  border: none;
-}
-
-#name {
-  margin-bottom: 5px;
-  text-decoration: underline;
-  display: flex;
-  flex: 1 1 auto;
-  text-underline-offset: 3px;
-}
-
-#work-title {
-  margin-top: 5px;
-  padding: 0px;
-}
-
-.skill-link {
-  font-weight: bold;
-}
-
-.table-title {
-  padding-right: 10px;
-  font-weight: 600;
-}
-
-.job {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 #content {
   margin: 0 16.5vw;
   overflow: auto;
@@ -46,12 +5,6 @@ button {
 
 ul {
   list-style-type: disc;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 0.5rem;
-  }
 }
 
 h3 {
@@ -67,9 +20,6 @@ h4 {
 
 }
 
-.work-location {
-  font-weight: 600;
-}
 
 #control-buttons {
   display: flex;
@@ -97,7 +47,55 @@ html[theme='dark'] #print-button {
   filter: invert(82%) sepia(5%) saturate(508%) hue-rotate(357deg) brightness(91%) contrast(93%);
 }
 
+#name {
+  margin-bottom: 5px;
+  text-decoration: underline;
+  display: flex;
+  flex: 1 1 auto;
+  text-underline-offset: 3px;
+}
+
+#work-title {
+  margin-top: 5px;
+  padding: 0px;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: max-content min-content;
+}
+
+.contact-item {
+  font-weight: 600; 
+  margin-right: 10px;
+}
+
 #skills {
   display: grid;
   grid-template-columns: max-content max-content;
+}
+
+.skill-title {
+  padding-right: 10px;
+  font-weight: 600;
+}
+
+.job {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.work-location {
+  font-weight: 600;
+}
+
+.external-link {
+  font-weight: bold !important;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.5rem;
+  }
 }
