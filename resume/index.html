@@ -6,74 +6,77 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dalton Edmisten Resume</title>
+  <link href="../common/global.css" rel="stylesheet" />
   <link href="../common/themes.css" rel="stylesheet"/>
   <link href='../common/tooltip.css' rel="stylesheet" />
   <link href='resume.css' rel="stylesheet" />
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
+  <script defer src="../common/theme.js"></script>
 </head>
 
 <body>
-  <img id="themeSvg" onclick='buttonClick(this)'/>
+  <div id="control-buttons">
+    <theme-toggle></theme-toggle>
+    <button title="Printer friendly version" id="print-button" onclick="print()"><img alt="" src ="../common/print.svg"/></button>
+  </div>
   <div id="content">
-    <h2 name="resume" id="resume">Resume</h2>
     <h3 name="name" id="name">Dalton Edmisten</h3>
     <p id="workTitle"><i>Software Developer / Project Manager, <span tooltip="United States Air Force">USAF</span></i></p>
     <div id="contact">
       <p class="contactItem">Cell Phone #: <a href="tel:+1-712-230-7424">+1-712-230-7424</a></p>
-      <p class="contactItem">Work Phone #: <a href="tel:+1-402-294-2594">+1-402-294-2594</a></p>
       <p class="contactItem">Email: <a href="mailto:daltonedmisten@gmail.com">daltonedmisten@gmail.com</a></p>
       <p class="contactItem">
-        LinkedIn: <a target="_blank"
+        LinkedIn: <a target="_blank" referrerpolicy="no-referrer"
           href="https://www.linkedin.com/in/daltonedmisten">https://www.linkedin.com/in/daltonedmisten</a>
       </p>
       <p class="contactItem">
-        GitHub: <a target="_blank" href="https://github.com/deuce109">https://github.com/deuce109</a>
+        GitHub: <a target="_blank" referrerpolicy="no-referrer" href="https://github.com/deuce109">https://github.com/deuce109</a>
       </p>
     </div>
   
     <h3 name="skills" id="skills">Technical Skills</h3>
-    <table id="skills-table">
-      <tr>
-        <td class='tableTitle'>Languages:</td>
-        <td>Java, .Net Core, Python 3, Go(lang), VBA, JavaScript/TypeScript, HTML, CSS, SQL</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Frameworks:</td>
-        <td>Spring, React.JS, Express.JS, SocketIO, SASS, ArcGIS, Android SDK, WPF, Material UI</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Web Services:</td>
-        <td>SOAP, Restful, Micro Service Architecture</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Databases:</td>
-        <td>Redis, MongoDB, MySQL, Microsoft Acces, SQLite</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Web Hosting:</td>
-        <td>NGINX, Pivotal Cloud Foundary, AWS, Traefik</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Build / <span tooltip="Continuous Integration / Continuous Development">CI-CD:</span></td>
-        <td>Concourse, Jenkins, Gradle, CSProj, Webpack, Fortifiy, Sonarqube</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Project Management:</td>
-        <td>Jira, Trello, Pivotal Tracker</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Version Control:</td>
-        <td>Git, Gitlab, GitHub</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Operating Systems:</td>
-        <td>Windows, Ubuntu, Red Hat 8, Android</td>
-      </tr>
-      <tr>
-        <td class='tableTitle'>Serialization:</td>
-        <td>JSON, CSV, Binary, XML</td>
-      </tr>
-    </table>
+    <div id="skills-table">
+      <div>
+        <span class='tableTitle'>Languages:</span>
+        <span>Java, .Net Core, Python 3, Go(lang), VBA, JavaScript/TypeScript, HTML, CSS, SQL</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Frameworks:</span>
+        <span>Spring, React.JS, Express.JS, SocketIO, SASS, ArcGIS, Android SDK, WPF, Material UI</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Web Services:</span>
+        <span>SOAP, Restful, Micro Service Architecture</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Databases:</span>
+        <span>Redis, MongoDB, MySQL, Microsoft Acces, SQLite</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Web Hosting:</span>
+        <span>NGINX, Pivotal Cloud Foundary, AWS, Traefik</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Build / <span tooltip="Continuous Integration / Continuous Development">CI-CD:</span></span>
+        <span>Concourse, Jenkins, Gradle, CSProj, Webpack, Fortifiy, Sonarqube</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Project Management:</span>
+        <span>Jira, Trello, Pivotal Tracker</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Version Control:</span>
+        <span>Git, Gitlab, GitHub</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Operating Systems:</span>
+        <span>Windows, Ubuntu, Red Hat 8, Android</span>
+      </div>
+      <div>
+        <span class='tableTitle'>Serialization:</span>
+        <span>JSON, CSV, Binary, XML</span>
+      </div>
+    </div>
   
     <h3 name="experience" id="experience">Experience</h3>
     <h4 name="professional" id="professional">Professional</h4>
@@ -132,7 +135,7 @@
         Develop website to display information for an artist and to allow personal requests using a <b>Go</b> server with a <b>MongoDB</b> database and <b>Typescript React.JS</b> frontend.
       </li>
       <li>
-        Develop a OS agnostic application to create .ISO images from an inserted disk using <b>.Net Core</b> and <a target="_blank" href="https://avaloniaui.net/">Avalonia UI</a>
+        Develop a OS agnostic application to create .ISO images from an inserted disk using <b>.Net Core</b> and <a class="skill-link" target="_blank" href="https://avaloniaui.net/">Avalonia UI</a>
       </li>
     </ul>
     </div>

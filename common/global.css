@@ -1,0 +1,19 @@
+.link-button {
+    display: block;
+    border: 1px solid --var(primary);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+html {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+
+  a, a:hover, a:visited, a:active {
+    color: var(--text) !important;
+  }
